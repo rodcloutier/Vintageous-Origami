@@ -14,6 +14,11 @@
 	{ "keys": ["ctrl+o"], "command": "vio_only", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 
 
+	// Custom 
+	// Close window on ctrl+w x
+	{ "keys": ["x"], "command": "close", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
+
+
 	// Origami remap (OSX)
 
 	{ "keys": ["up"], "command": "travel_to_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
