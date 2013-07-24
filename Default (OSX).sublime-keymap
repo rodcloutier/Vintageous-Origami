@@ -1,38 +1,5 @@
 [
-	// Standard Vim commands
-	
-	// Movements are already provided by Vintageous
-
-	{ "keys": ["v"], "command": "vio_vsplit", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["ctrl+v"], "command": "vio_vsplit", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["s"], "command": "vio_split", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["S"], "command": "vio_split", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["ctrl+s"], "command": "vio_split", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["c"], "command": "vio_close", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["n"], "command": "vio_new", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["o"], "command": "vio_only", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["ctrl+o"], "command": "vio_only", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-
-	// Custom 
-	// Close window on ctrl+w x
-	{ "keys": ["x"], "command": "close", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-
-	// Origami remap (OSX)
-
-	{ "keys": ["up"], "command": "travel_to_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["right"], "command": "travel_to_pane", "args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["down"], "command": "travel_to_pane", "args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] }, 
-	{ "keys": ["left"], "command": "travel_to_pane", "args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-
-	{ "keys": ["shift+up"], "command": "carry_file_to_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["shift+right"], "command": "carry_file_to_pane", "args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["shift+down"], "command": "carry_file_to_pane", "args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["shift+left"], "command": "carry_file_to_pane", "args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-
-	{ "keys": ["alt+up"], "command": "clone_file_to_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["alt+right"], "command": "clone_file_to_pane", "args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["alt+down"], "command": "clone_file_to_pane", "args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["alt+left"], "command": "clone_file_to_pane", "args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
+	// Origami remap
 
 	{ "keys": ["super+up"], "command": "create_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 	{ "keys": ["super+right"], "command": "create_pane", "args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
@@ -48,5 +15,4 @@
 	{ "keys": ["super+alt+right"], "command": "create_pane_with_file", "args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 	{ "keys": ["super+alt+down"], "command": "create_pane_with_file", "args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 	{ "keys": ["super+alt+left"], "command": "create_pane_with_file", "args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] }
-
 ]
