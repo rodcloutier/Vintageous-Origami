@@ -29,6 +29,15 @@ The default Origami binding are still available after pressing `ctrl+w`
 
 (Note: Windows and Linux use `ctrl` instead of `super`.)
 
+
+Commands
+-------
+The following basic commands are implemented:
+* `:vs(plit)`: Vertical split
+* `:s(plit)`: Horizontal split
+
+
+
 Install
 -------
 
