@@ -34,7 +34,7 @@ Commands
 -------
 The following basic commands are implemented:
 * `:vs(plit)`: Vertical split
-* `:s(plit)`: Horizontal split
+* `:sp(lit)`: Horizontal split
 
 
 
