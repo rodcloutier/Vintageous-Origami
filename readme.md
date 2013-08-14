@@ -61,7 +61,7 @@ First make sure Origami is already installed:
 
 	https://github.com/SublimeText/Origami
 
-Go to your Packages subdirectory under ST2's data directory:
+Go to your Packages subdirectory under ST3's data directory:
 
 * Windows: %APPDATA%\Sublime Text 3
 * OS X: ~/Library/Application Support/Sublime Text 3
