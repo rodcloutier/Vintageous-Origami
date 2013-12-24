@@ -6,10 +6,10 @@
 	{ "keys": ["j"], "command": "travel_to_pane", "args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 	{ "keys": ["h"], "command": "travel_to_pane", "args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 
-	{ "keys": ["K"], "command": "carry_file_to_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["L"], "command": "carry_file_to_pane", "args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["J"], "command": "carry_file_to_pane", "args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	{ "keys": ["H"], "command": "carry_file_to_pane", "args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
+	{ "keys": ["K"], "command": "vio_exchange_files_with_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
+	{ "keys": ["L"], "command": "vio_exchange_files_with_pane", "args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
+	{ "keys": ["J"], "command": "vio_exchange_files_with_pane", "args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
+	{ "keys": ["H"], "command": "vio_exchange_files_with_pane", "args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 
 	{ "keys": ["v"], "command": "vio_vsplit", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 	{ "keys": ["ctrl+v"], "command": "vio_vsplit", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },

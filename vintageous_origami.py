@@ -1,5 +1,6 @@
 import sublime_plugin
 
+from Origami.origami import PaneCommand as OrigamiPaneCommand
 
 from Vintageous.ex.ex_command_parser import ex_cmd_data, EX_COMMANDS
 
@@ -36,6 +37,12 @@ class VioSplitCommand(sublime_plugin.WindowCommand):
         self.window.run_command("clone_file_to_pane", {"direction": "down"})
 
 
+class VioExchangeCarryAndExchangeFiletoPane(sublime_plugin.WindowCommand):
+    def run(self):
+        #
+        self.window.run_command("carry_file_to_pane", {"direction": "right"})
+
+
 def find_duplicate(l):
     seen = set()
     seen_add = seen.add
@@ -70,3 +77,22 @@ class VioNewCommand(sublime_plugin.WindowCommand):
 class VioOnlyCommand(sublime_plugin.WindowCommand):
     def run(self):
         self.window.run_command("set_layout", {"cells": [[0, 0, 1, 1]], "cols": [0.0, 1.0], "rows": [0.0, 1.0]})
+
+
+def opposite_direction(direction):
+        opposites = {"up":"down", "right":"left", "down":"up", "left":"right"}
+        return opposites[direction]
+
+
+class VioExchangeFilesWithPane(OrigamiPaneCommand):
+    def run(self, direction):
+        window = self.window
+        window.run_command("carry_file_to_pane", {'direction': direction})
+        active_group = window.active_group()
+        views = window.views_in_group(active_group)
+        active_view = window.active_view()
+        if views:
+            window.focus_view(views[1])
+            window.run_command("carry_file_to_pane", {'direction': opposite_direction(direction)})
+            window.focus_view(active_view)
+
