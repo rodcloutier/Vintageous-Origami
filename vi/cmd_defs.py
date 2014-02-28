@@ -10,6 +10,7 @@ def patch_class(cls, patch):
 class cmds:
 
     CTRL_W_C = 'vio_ctrl_w_c'
+    CTRL_W_N = 'vio_ctrl_w_n'
     CTRL_W_S = 'vio_ctrl_w_s'
     CTRL_W_V = 'vio_ctrl_w_v'
 
@@ -18,6 +19,7 @@ class cmds:
 cmd_defs = {
     modes.NORMAL: {
         cmds.CTRL_W_C: dict(name=cmds.CTRL_W_C, input=None, type=cmd_types.ACTION, motion_required=False, multi_step=False, repeatable=False),
+        cmds.CTRL_W_N: dict(name=cmds.CTRL_W_N, input=None, type=cmd_types.ACTION, motion_required=False, multi_step=False, repeatable=False),
         cmds.CTRL_W_S: dict(name=cmds.CTRL_W_S, input=None, type=cmd_types.ACTION, motion_required=False, multi_step=False, repeatable=False),
         cmds.CTRL_W_V: dict(name=cmds.CTRL_W_V, input=None, type=cmd_types.ACTION, motion_required=False, multi_step=False, repeatable=False),
     }

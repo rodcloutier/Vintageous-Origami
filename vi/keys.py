@@ -10,6 +10,7 @@ def patch_class(cls, patch):
 class seqs:
 
     CTRL_W_C = '<C-w>c'
+    CTRL_W_N = '<C-w>n'
     CTRL_W_S = '<C-w>s'
     CTRL_W_V = '<C-w>v'
 
@@ -21,6 +22,7 @@ def patch():
     mappings = {
         modes.NORMAL: {
             seqs.CTRL_W_C: cmd_defs[modes.NORMAL][cmds.CTRL_W_C],
+            seqs.CTRL_W_N: cmd_defs[modes.NORMAL][cmds.CTRL_W_N],
             seqs.CTRL_W_S: cmd_defs[modes.NORMAL][cmds.CTRL_W_S],
             seqs.CTRL_W_V: cmd_defs[modes.NORMAL][cmds.CTRL_W_V],
         },
