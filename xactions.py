@@ -15,7 +15,7 @@ class _vio_ctrl_w_s(sublime_plugin.WindowCommand):
     """
     Split pane horizontally
     """
-    def run(self, mode=None, count=1):
+    def run(self):
         self.window.run_command("create_pane", {"direction": "down"})
         self.window.run_command("clone_file_to_pane", {"direction": "down"})
 
@@ -25,7 +25,7 @@ class _vio_ctrl_w_v(sublime_plugin.WindowCommand):
     """
     Split pane vertically
     """
-    def run(self, mode=None, count=1):
+    def run(self):
         self.window.run_command("create_pane", {"direction": "right"})
         self.window.run_command("clone_file_to_pane", {"direction": "right"})
 
@@ -34,8 +34,7 @@ class _vio_ctrl_w_c(sublime_plugin.WindowCommand):
     """
     Close pane
     """
-    def run(self, mode=None, count=1):
-        print("Hey!")
+    def run(self):
         self.window.run_command("close_pane")
 
         # Now remove the duplicates
@@ -55,7 +54,7 @@ class _vio_ctrl_w_n(sublime_plugin.WindowCommand):
     """
     Create new file in new horizontal pane
     """
-    def run(self, mode=None, count=1):
+    def run(self):
         self.window.run_command("create_pane", {"direction": "up"})
         self.window.run_command("travel_to_pane", {"direction": "up"})
         self.window.run_command("new_file")
@@ -91,13 +90,6 @@ class _vio_exchange_files_with_pane(OrigamiPaneCommand):
 # class VioExSplitCommand(sublime_plugin.WindowCommand):
 #     def run(self, line_range=None):
 #         VioSplitCommand.run(self)
-
-
-
-# class VioExchangeCarryAndExchangeFiletoPane(sublime_plugin.WindowCommand):
-#     def run(self):
-#         #
-#         self.window.run_command("carry_file_to_pane", {"direction": "right"})
 
 
 

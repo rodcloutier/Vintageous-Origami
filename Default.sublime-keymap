@@ -1,19 +1,8 @@
 [
 	// Standard Vim commands
 
-	// { "keys": ["k"], "command": "travel_to_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["l"], "command": "travel_to_pane", "args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["j"], "command": "travel_to_pane", "args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["h"], "command": "travel_to_pane", "args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-
-	// { "keys": ["K"], "command": "vio_exchange_files_with_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["L"], "command": "vio_exchange_files_with_pane", "args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["J"], "command": "vio_exchange_files_with_pane", "args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["H"], "command": "vio_exchange_files_with_pane", "args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 
 	// { "keys": ["ctrl+v"], "command": "vio_vsplit", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["S"], "command": "vio_split", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["ctrl+s"], "command": "vio_split", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 	// { "keys": ["o"], "command": "vio_only", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 	// { "keys": ["ctrl+o"], "command": "vio_only", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
 
