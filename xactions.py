@@ -61,6 +61,24 @@ class _vio_ctrl_w_n(sublime_plugin.WindowCommand):
         self.window.run_command("new_file")
 
 
+def opposite_direction(direction):
+        opposites = {"up":"down", "right":"left", "down":"up", "left":"right"}
+        return opposites[direction]
+
+
+class _vio_exchange_files_with_pane(OrigamiPaneCommand):
+    def run(self, direction):
+        window = self.window
+        window.run_command("carry_file_to_pane", {'direction': direction})
+        active_group = window.active_group()
+        views = window.views_in_group(active_group)
+        active_view = window.active_view()
+        if views:
+            window.focus_view(views[1])
+            window.run_command("carry_file_to_pane", {'direction': opposite_direction(direction)})
+            window.focus_view(active_view)
+
+
 # from Vintageous.ex.ex_command_parser import ex_cmd_data, EX_COMMANDS
 
 
@@ -95,19 +113,3 @@ class _vio_ctrl_w_n(sublime_plugin.WindowCommand):
 #         self.window.run_command("set_layout", {"cells": [[0, 0, 1, 1]], "cols": [0.0, 1.0], "rows": [0.0, 1.0]})
 
 
-# def opposite_direction(direction):
-#         opposites = {"up":"down", "right":"left", "down":"up", "left":"right"}
-#         return opposites[direction]
-
-
-# class VioExchangeFilesWithPane(OrigamiPaneCommand):
-#     def run(self, direction):
-#         window = self.window
-#         window.run_command("carry_file_to_pane", {'direction': direction})
-#         active_group = window.active_group()
-#         views = window.views_in_group(active_group)
-#         active_view = window.active_view()
-#         if views:
-#             window.focus_view(views[1])
-#             window.run_command("carry_file_to_pane", {'direction': opposite_direction(direction)})
-#             window.focus_view(active_view)

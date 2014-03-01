@@ -26,9 +26,36 @@ def vio_ctrl_w_v(state, **kwargs):
     cmd['action_args'] = {'mode': state.mode, 'count': state.count}
     return cmd
 
+def vio_ctrl_w_k(state, **kwargs):
+    return  {
+        'action': "travel_to_pane",
+        'action_args': {'direction' : 'up'}
+    }
+
+def vio_ctrl_w_l(state, **kwargs):
+    return  {
+        'action': "travel_to_pane",
+        'action_args': {'direction' : 'right'}
+    }
+
+def vio_ctrl_w_j(state, **kwargs):
+    return  {
+        'action': "travel_to_pane",
+        'action_args': {'direction' : 'down'}
+    }
+
+def vio_ctrl_w_h(state, **kwargs):
+    return  {
+        'action': "travel_to_pane",
+        'action_args': {'direction' : 'left'}
+    }
 
 actions = (
     vio_ctrl_w_c,
+    vio_ctrl_w_h,
+    vio_ctrl_w_j,
+    vio_ctrl_w_k,
+    vio_ctrl_w_l,
     vio_ctrl_w_n,
     vio_ctrl_w_s,
     vio_ctrl_w_v
