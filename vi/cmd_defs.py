@@ -31,6 +31,10 @@ class cmds:
     CTRL_W_X        = 'vio_ctrl_w_x'
     CTRL_W_BIG_X    = 'vio_ctrl_w_big_x'
 
+    CTRL_W_UP       = 'vio_ctrl_w_k'
+    CTRL_W_RIGHT    = 'vio_ctrl_w_l'
+    CTRL_W_DOWN     = 'vio_ctrl_w_j'
+    CTRL_W_LEFT     = 'vio_ctrl_w_h'
 
 # Patch the command definitions
 cmd_defs = {

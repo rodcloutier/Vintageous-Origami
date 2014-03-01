@@ -35,6 +35,12 @@ class seqs:
     CTRL_W_X        = '<C-w>x'  # Close window
     CTRL_W_BIG_X    = '<C-w>X'  # Close all windows
 
+    # Origami commands
+    CTRL_W_UP       = '<C-w><up>'
+    CTRL_W_RIGHT    = '<C-w><right>'
+    CTRL_W_DOWN     = '<C-w><down>'
+    CTRL_W_LEFT     = '<C-w><left>'
+
 
 def patch():
 
