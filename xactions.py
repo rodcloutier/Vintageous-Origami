@@ -26,6 +26,7 @@ class _vio_ctrl_w_v(sublime_plugin.WindowCommand):
     Split pane vertically
     """
     def run(self):
+        print("Ok!")
         self.window.run_command("create_pane", {"direction": "right"})
         self.window.run_command("clone_file_to_pane", {"direction": "right"})
 
@@ -94,10 +95,47 @@ from Vintageous.ex.ex_command_parser import ex_cmd_data, EX_COMMANDS
 EX_COMMANDS[('split', 'sp')] = ex_cmd_data(command="vio_ex_split",
                                            invocations=(),
                                            error_on=())
+EX_COMMANDS[('vsplit', 'vs')] = ex_cmd_data(command="vio_ex_vsplit",
+                                           invocations=(),
+                                           error_on=())
+EX_COMMANDS[('new', 'new')] = ex_cmd_data(command="vio_ex_new",
+                                           invocations=(),
+                                           error_on=())
+EX_COMMANDS[('vnew', 'vne')] = ex_cmd_data(command="vio_ex_vnew",
+                                           invocations=(),
+                                           error_on=())
+
+
+
+# Vintageous version's
+# ('vsplit', 'vs'): ex_cmd_data(
+#                             command='ex_vsplit',
+#                             invocations=(
+#                                 re.compile(r'^$'),
+#                                 re.compile(r'^\s*(?P<file_name>.+)$'),
+#                             ),
+#                             error_on=(ex_error.ERR_NO_RANGE_ALLOWED,
+#                                       ex_error.ERR_NO_BANG_ALLOWED,)
+#                             ),
 
 
 class VioExSplitCommand(sublime_plugin.WindowCommand):
     def run(self, line_range=None):
         _vio_ctrl_w_s.run(self)
+
+
+class VioExVsplitCommand(sublime_plugin.WindowCommand):
+    def run(self, line_range=None):
+        _vio_ctrl_w_v.run(self)
+
+class VioExNewCommand(sublime_plugin.WindowCommand):
+    def run(self, line_range=None):
+        _vio_ctrl_w_n.run(self)
+
+class VioExVnewCommand(sublime_plugin.WindowCommand):
+    def run(self, line_range=None):
+        self.window.run_command("create_pane", {"direction": "right"})
+        self.window.run_command("travel_to_pane", {"direction": "right"})
+        self.window.run_command("new_file")
 
 

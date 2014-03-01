@@ -36,6 +36,9 @@ class cmds:
     CTRL_W_DOWN     = 'vio_ctrl_w_j'
     CTRL_W_LEFT     = 'vio_ctrl_w_h'
 
+    CTRL_W_SHIFT_UP = 'vio_ctrl_w_big_h'
+
+
 # Patch the command definitions
 cmd_defs = {
     modes.NORMAL: {
