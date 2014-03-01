@@ -20,10 +20,13 @@ class cmds:
     CTRL_W_BIG_L    = 'vio_ctrl_w_big_l'
     CTRL_W_N        = 'vio_ctrl_w_n'
     CTRL_W_CTRL_N   = 'vio_ctrl_w_n'
+    CTRL_W_O        = 'vio_ctrl_w_o'
+    CTRL_W_CTRL_O   = 'vio_ctrl_w_o'
     CTRL_W_S        = 'vio_ctrl_w_s'
     CTRL_W_BIG_S    = 'vio_ctrl_w_s'
     CTRL_W_CTRL_S   = 'vio_ctrl_w_s'
     CTRL_W_V        = 'vio_ctrl_w_v'
+    CTRL_W_CTRL_V   = 'vio_ctrl_w_v'
 
 
 # Patch the command definitions

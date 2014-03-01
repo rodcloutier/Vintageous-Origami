@@ -1,12 +1,4 @@
 [
-	// Standard Vim commands
-
-
-	// { "keys": ["ctrl+v"], "command": "vio_vsplit", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["o"], "command": "vio_only", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// { "keys": ["ctrl+o"], "command": "vio_only", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-
-
 	// Custom mappings
 
 	// Close window on ctrl+w x

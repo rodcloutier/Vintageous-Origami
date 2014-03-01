@@ -78,6 +78,12 @@ class _vio_exchange_files_with_pane(OrigamiPaneCommand):
             window.focus_view(active_view)
 
 
+class _vio_ctrl_w_o(sublime_plugin.WindowCommand):
+    def run(self):
+        self.window.run_command("create_pane", {"direction": "up"})
+        self.window.run_command("travel_to_pane", {"direction": "up"})
+        self.window.run_command("new_file")
+
 # from Vintageous.ex.ex_command_parser import ex_cmd_data, EX_COMMANDS
 
 

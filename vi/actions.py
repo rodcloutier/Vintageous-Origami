@@ -74,6 +74,13 @@ def vio_ctrl_w_big_l(state, **kwargs):
         'action_args': {'direction': 'right'}
     }
 
+def vio_ctrl_w_o(state, **kwargs):
+    return {
+        'action': '_vio_ctrl_w_o',
+        'action_args': {}
+    }
+
+
 actions = (
     vio_ctrl_w_c,
     vio_ctrl_w_h,
@@ -85,6 +92,7 @@ actions = (
     vio_ctrl_w_l,
     vio_ctrl_w_big_l,
     vio_ctrl_w_n,
+    vio_ctrl_w_o,
     vio_ctrl_w_s,
     vio_ctrl_w_v
 )

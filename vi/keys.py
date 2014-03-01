@@ -20,10 +20,13 @@ class seqs:
     CTRL_W_BIG_L    = '<C-w>L'
     CTRL_W_N        = '<C-w>n'
     CTRL_W_CTRL_N   = '<C-w><C-n>'
+    CTRL_W_O        = '<C-w>o'
+    CTRL_W_CTRL_O   = '<C-w><C-o>'
     CTRL_W_S        = '<C-w>s'
     CTRL_W_BIG_S    = '<C-w>S'
     CTRL_W_CTRL_S   = '<C-w><C-s>'
     CTRL_W_V        = '<C-w>v'
+    CTRL_W_CTRL_V   = '<C-w><C-v>'
 
 
 def patch():
