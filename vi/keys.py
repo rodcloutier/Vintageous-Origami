@@ -9,6 +9,8 @@ def patch_class(cls, patch):
 
 class seqs:
 
+    # Standard Vim commands
+
     CTRL_W_C        = '<C-w>c'
     CTRL_W_H        = '<C-w>h'
     CTRL_W_BIG_H    = '<C-w>H'
@@ -27,6 +29,11 @@ class seqs:
     CTRL_W_CTRL_S   = '<C-w><C-s>'
     CTRL_W_V        = '<C-w>v'
     CTRL_W_CTRL_V   = '<C-w><C-v>'
+
+
+    # Custom commands
+    CTRL_W_X        = '<C-w>x'  # Close window
+    CTRL_W_BIG_X    = '<C-w>X'  # Close all windows
 
 
 def patch():

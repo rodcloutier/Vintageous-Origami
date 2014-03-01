@@ -80,6 +80,17 @@ def vio_ctrl_w_o(state, **kwargs):
         'action_args': {}
     }
 
+def vio_ctrl_w_x(state, **kwargs):
+    return {
+        'action': 'close',
+        'action_args': {}
+    }
+
+def vio_ctrl_w_big_x(state, **kwargs):
+    return {
+        'action': 'close_all',
+        'action_args': {}
+    }
 
 actions = (
     vio_ctrl_w_c,
@@ -94,7 +105,9 @@ actions = (
     vio_ctrl_w_n,
     vio_ctrl_w_o,
     vio_ctrl_w_s,
-    vio_ctrl_w_v
+    vio_ctrl_w_v,
+    vio_ctrl_w_x,
+    vio_ctrl_w_big_x,
 )
 
 def patch():

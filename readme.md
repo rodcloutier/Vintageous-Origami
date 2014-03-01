@@ -50,8 +50,13 @@ Make sure you have Vintageous installed already:
 	https://github.com/guillermooo/Vintageous
 
 
+Enable Vintageous to use ctrl keys in your preferences
 
-This plugin will soon be available through [Package Control](http://wbond.net/sublime_packages/package_control).
+	`"vintageous_use_ctrl_keys": true`
+
+
+
+This plugin is available through [Package Control](http://wbond.net/sublime_packages/package_control).
 
 
 Manual Install

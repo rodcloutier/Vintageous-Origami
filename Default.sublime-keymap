@@ -1,12 +1,4 @@
 [
-	// Custom mappings
-
-	// Close window on ctrl+w x
-	// { "keys": ["x"], "command": "close", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-	// Close all windows on ctrl+w X
-	// { "keys": ["X"], "command": "close_all", "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },
-
-
 	// Origami remap
 
 	// { "keys": ["up"], "command": "travel_to_pane", "args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}, {"key": "vi_in_key_namespace", "operand": "ctrl_w"}] },

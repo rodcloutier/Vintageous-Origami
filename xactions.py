@@ -80,9 +80,7 @@ class _vio_exchange_files_with_pane(OrigamiPaneCommand):
 
 class _vio_ctrl_w_o(sublime_plugin.WindowCommand):
     def run(self):
-        self.window.run_command("create_pane", {"direction": "up"})
-        self.window.run_command("travel_to_pane", {"direction": "up"})
-        self.window.run_command("new_file")
+        self.window.run_command("set_layout", {"cells": [[0, 0, 1, 1]], "cols": [0.0, 1.0], "rows": [0.0, 1.0]})
 
 # from Vintageous.ex.ex_command_parser import ex_cmd_data, EX_COMMANDS
 
@@ -107,7 +105,5 @@ class _vio_ctrl_w_o(sublime_plugin.WindowCommand):
 
 
 # class VioOnlyCommand(sublime_plugin.WindowCommand):
-#     def run(self):
-#         self.window.run_command("set_layout", {"cells": [[0, 0, 1, 1]], "cols": [0.0, 1.0], "rows": [0.0, 1.0]})
 
 
