@@ -82,28 +82,22 @@ class _vio_ctrl_w_o(sublime_plugin.WindowCommand):
     def run(self):
         self.window.run_command("set_layout", {"cells": [[0, 0, 1, 1]], "cols": [0.0, 1.0], "rows": [0.0, 1.0]})
 
-# from Vintageous.ex.ex_command_parser import ex_cmd_data, EX_COMMANDS
 
+
+
+# Ex commands
+
+
+from Vintageous.ex.ex_command_parser import ex_cmd_data, EX_COMMANDS
 
 # #TODO: Add support for filename, args, etc.
-# EX_COMMANDS[('split', 'sp')] = ex_cmd_data(command="vio_ex_split",
-#                                            invocations=(),
-#                                            error_on=())
+EX_COMMANDS[('split', 'sp')] = ex_cmd_data(command="vio_ex_split",
+                                           invocations=(),
+                                           error_on=())
 
 
-# class VioExSplitCommand(sublime_plugin.WindowCommand):
-#     def run(self, line_range=None):
-#         VioSplitCommand.run(self)
-
-
-
-# class VioNewCommand(sublime_plugin.WindowCommand):
-#     def run(self):
-#         self.window.run_command("create_pane", {"direction": "up"})
-#         self.window.run_command("travel_to_pane", {"direction": "up"})
-#         self.window.run_command("new_file")
-
-
-# class VioOnlyCommand(sublime_plugin.WindowCommand):
+class VioExSplitCommand(sublime_plugin.WindowCommand):
+    def run(self, line_range=None):
+        _vio_ctrl_w_s.run(self)
 
 
