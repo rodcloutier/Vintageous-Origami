@@ -13,15 +13,24 @@ Notes
 
 To use this with Vintageous, first press `ctrl+w`, then press one of following key
 
-* `v` `ctrl_v`: Vertical split
+* `v` `ctrl+v`: Vertical split
 * `s` `S` `ctrl+s`: Horizontal split
 * `c`: Close pane
-* `n`: New horizontal split with empty file
+* `n` `ctrl+n`: New horizontal split with empty file
 * `o` `ctrl+o`: Make current pane the only one
 
-The default Origami binding are still available after pressing `ctrl+w`
+Also adds custom bindings:
+
+* `x`: Close window
+* `X`: Close all windows
+
+The following Origami bindings are still available after pressing `ctrl+w`.
 
 * no modifiers: travel to an adjacent pane
+
+Unfortunately, Vintageous does not provide access to the modifiers with directional arrows under `ctrl+w`.
+The following Origami bindings will not work.
+
 * `shift`: carry the current file to the destination
 * `alt`(`option`):  clone the current file to the destination
 * `super`: create an adjacent pane
@@ -33,8 +42,10 @@ The default Origami binding are still available after pressing `ctrl+w`
 Commands
 -------
 The following basic commands are implemented:
-* `:vs(plit)`: Vertical split
-* `:sp(lit)`: Horizontal split
+* `:vs[plit]`: Vertical split
+* `:sp[lit]`: Horizontal split
+* `:new`: Horizontal split with new file
+* `:vne[w]`: Vertical split with new file
 
 
 
@@ -50,8 +61,13 @@ Make sure you have Vintageous installed already:
 	https://github.com/guillermooo/Vintageous
 
 
+Enable Vintageous to use ctrl keys in your preferences
 
-This plugin will soon be available through [Package Control](http://wbond.net/sublime_packages/package_control).
+	`"vintageous_use_ctrl_keys": true`
+
+
+
+This plugin is available through [Package Control](http://wbond.net/sublime_packages/package_control).
 
 
 Manual Install
@@ -71,6 +87,11 @@ Go to your Packages subdirectory under ST3's data directory:
 Then clone this repository:
 
     git clone https://github.com/rodcloutier/Vintageous-Origami.git
+
+
+Todo
+--------------
+* Add support for arguments to :sp :vs :new :vnew
 
 
 Inspired by https://github.com/garyc40/Vintage-Origami
