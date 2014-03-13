@@ -1,3 +1,4 @@
+import sublime
 import sublime_plugin
 
 from Origami.origami import PaneCommand as OrigamiPaneCommand
@@ -10,6 +11,20 @@ def find_duplicate(l):
     return list(x for x in l if x in seen or seen_add(x))
 
 
+SPLIT_COMMANDS = {
+    'clone': 'clone_file_to_pane',
+    'carry': 'carry_file_to_pane'
+}
+
+def split_command_from_settings():
+    prefs = sublime.load_settings('Preferences.sublime-settings')
+    command = prefs.get('vintageous_origami_split_command')
+    if command not in SPLIT_COMMANDS:
+        if command is not None:
+            print('"vintageous_origami_split_command" option must be in %s' % SPLIT_COMMANDS.keys())
+        command = 'clone'
+    return SPLIT_COMMANDS[command]
+
 
 class _vio_ctrl_w_s(sublime_plugin.WindowCommand):
     """
@@ -17,7 +32,7 @@ class _vio_ctrl_w_s(sublime_plugin.WindowCommand):
     """
     def run(self):
         self.window.run_command("create_pane", {"direction": "down"})
-        self.window.run_command("clone_file_to_pane", {"direction": "down"})
+        self.window.run_command(split_command_from_settings(), {"direction": "down"})
 
 
 class _vio_ctrl_w_v(sublime_plugin.WindowCommand):
@@ -26,9 +41,8 @@ class _vio_ctrl_w_v(sublime_plugin.WindowCommand):
     Split pane vertically
     """
     def run(self):
-        print("Ok!")
         self.window.run_command("create_pane", {"direction": "right"})
-        self.window.run_command("clone_file_to_pane", {"direction": "right"})
+        self.window.run_command(split_command_from_settings(), {"direction": "right"})
 
 
 class _vio_ctrl_w_c(sublime_plugin.WindowCommand):
