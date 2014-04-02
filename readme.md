@@ -46,6 +46,7 @@ The following basic commands are implemented:
 * `:sp[lit]`: Horizontal split
 * `:new`: Horizontal split with new file
 * `:vne[w]`: Vertical split with new file
+* `:on[ly]`: Make current pane the only one
 
 
 
