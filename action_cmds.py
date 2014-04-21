@@ -150,7 +150,7 @@ class VintageousOrigamiClose(VintageousOrigamiBase):
 
 
 @plugins.register(keys=[('<C-w>X', (modes.NORMAL,))])
-class VintageousOrigamiClose(VintageousOrigamiBase):
+class VintageousOrigamiCloseAll(VintageousOrigamiBase):
     def translate(self, state):
         return {
             'action': 'close_all',
