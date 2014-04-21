@@ -18,17 +18,25 @@ To use this with Vintageous, first press `ctrl+w`, then press one of following k
 * `c`: Close pane
 * `n` `ctrl+n`: New horizontal split with empty file
 * `o` `ctrl+o`: Make current pane the only one
+* `l`, `<right>`: Move to right pane
+* `h`, `<left>`: Move to left pane
+* `k`, `<up>`: Move to up pane
+* `j`, `<down>`: Move to down pane
+* `L`: Exchange with right pane
+* `H`: Exchange with left pane
+* `K`: Exchange with up pane
+* `J`: Exchange with down pane
 
 Also adds custom bindings:
 
 * `x`: Close window
 * `X`: Close all windows
 
+
 The following Origami bindings are still available after pressing `ctrl+w`.
 
 * no modifiers: travel to an adjacent pane
 
-Unfortunately, Vintageous does not provide access to the modifiers with directional arrows under `ctrl+w`.
 The following Origami bindings will not work.
 
 * `shift`: carry the current file to the destination
