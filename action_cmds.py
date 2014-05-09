@@ -12,7 +12,7 @@ class VintageousOrigamiBase(ViOperatorDef):
         self.motion_required = False
 
 
-@plugins.register(keys=[('<C-w>c', (modes.NORMAL,))])
+@plugins.register('<C-w>c', (modes.NORMAL,))
 class VintageousOrigamiClosePane(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -21,8 +21,8 @@ class VintageousOrigamiClosePane(VintageousOrigamiBase):
         cmd['action_args'] = {}
         return cmd
 
-@plugins.register(keys=[('<C-w>n', (modes.NORMAL,))])
-@plugins.register(keys=[('<C-w><C-n>', (modes.NORMAL,))])
+@plugins.register('<C-w>n', (modes.NORMAL,))
+@plugins.register('<C-w><C-n>', (modes.NORMAL,))
 class VintageousOrigamiSplitNewFile(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -31,8 +31,8 @@ class VintageousOrigamiSplitNewFile(VintageousOrigamiBase):
         cmd['action_args'] = {}
         return cmd
 
-@plugins.register(keys=[('<C-w>s', (modes.NORMAL,))])
-@plugins.register(keys=[('<C-w><C-s>', (modes.NORMAL,))])
+@plugins.register('<C-w>s', (modes.NORMAL,))
+@plugins.register('<C-w><C-s>', (modes.NORMAL,))
 class VintageousOrigamiSplitHorizontal(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -41,8 +41,8 @@ class VintageousOrigamiSplitHorizontal(VintageousOrigamiBase):
         cmd['action_args'] = {}
         return cmd
 
-@plugins.register(keys=[('<C-w>v', (modes.NORMAL,))])
-@plugins.register(keys=[('<C-w><C-v>', (modes.NORMAL,))])
+@plugins.register('<C-w>v', (modes.NORMAL,))
+@plugins.register('<C-w><C-v>', (modes.NORMAL,))
 class VintageousOrigamiSplitVertical(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -51,8 +51,8 @@ class VintageousOrigamiSplitVertical(VintageousOrigamiBase):
         cmd['action_args'] = {}
         return cmd
 
-@plugins.register(keys=[('<C-w>h', (modes.NORMAL,))])
-@plugins.register(keys=[('<C-w><left>', (modes.NORMAL,))])
+@plugins.register('<C-w>h', (modes.NORMAL,))
+@plugins.register('<C-w><left>', (modes.NORMAL,))
 class VintageousOrigamiTravelLeft(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -61,8 +61,8 @@ class VintageousOrigamiTravelLeft(VintageousOrigamiBase):
             'action_args': {'direction' : 'left'}
         }
 
-@plugins.register(keys=[('<C-w>j', (modes.NORMAL,))])
-@plugins.register(keys=[('<C-w><down>', (modes.NORMAL,))])
+@plugins.register('<C-w>j', (modes.NORMAL,))
+@plugins.register('<C-w><down>', (modes.NORMAL,))
 class VintageousOrigamiTravelDown(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -71,8 +71,8 @@ class VintageousOrigamiTravelDown(VintageousOrigamiBase):
             'action_args': {'direction' : 'down'}
         }
 
-@plugins.register(keys=[('<C-w>k', (modes.NORMAL,))])
-@plugins.register(keys=[('<C-w><up>', (modes.NORMAL,))])
+@plugins.register('<C-w>k', (modes.NORMAL,))
+@plugins.register('<C-w><up>', (modes.NORMAL,))
 class VintageousOrigamiTravelUp(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -81,8 +81,8 @@ class VintageousOrigamiTravelUp(VintageousOrigamiBase):
             'action_args': {'direction' : 'up'}
         }
 
-@plugins.register(keys=[('<C-w>l', (modes.NORMAL,))])
-@plugins.register(keys=[('<C-w><right>', (modes.NORMAL,))])
+@plugins.register('<C-w>l', (modes.NORMAL,))
+@plugins.register('<C-w><right>', (modes.NORMAL,))
 class VintageousOrigamiTravelRight(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -91,7 +91,7 @@ class VintageousOrigamiTravelRight(VintageousOrigamiBase):
             'action_args': {'direction' : 'right'}
         }
 
-@plugins.register(keys=[('<C-w>H', (modes.NORMAL,))])
+@plugins.register('<C-w>H', (modes.NORMAL,))
 class VintageousOrigamiExchangePaneLeft(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -100,7 +100,7 @@ class VintageousOrigamiExchangePaneLeft(VintageousOrigamiBase):
             'action_args': {'direction': 'left'}
         }
 
-@plugins.register(keys=[('<C-w>J', (modes.NORMAL,))])
+@plugins.register('<C-w>J', (modes.NORMAL,))
 class VintageousOrigamiExchangePaneDown(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -109,7 +109,7 @@ class VintageousOrigamiExchangePaneDown(VintageousOrigamiBase):
             'action_args': {'direction': 'down'}
         }
 
-@plugins.register(keys=[('<C-w>K', (modes.NORMAL,))])
+@plugins.register('<C-w>K', (modes.NORMAL,))
 class VintageousOrigamiExchangePaneUp(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -118,7 +118,7 @@ class VintageousOrigamiExchangePaneUp(VintageousOrigamiBase):
             'action_args': {'direction': 'up'}
         }
 
-@plugins.register(keys=[('<C-w>L', (modes.NORMAL,))])
+@plugins.register('<C-w>L', (modes.NORMAL,))
 class VintageousOrigamiExchangePaneRight(VintageousOrigamiBase):
 
     def translate(self, state):
@@ -128,8 +128,8 @@ class VintageousOrigamiExchangePaneRight(VintageousOrigamiBase):
         }
 
 
-@plugins.register(keys=[('<C-w>o', (modes.NORMAL,))])
-@plugins.register(keys=[('<C-w><C-o>', (modes.NORMAL,))])
+@plugins.register('<C-w>o', (modes.NORMAL,))
+@plugins.register('<C-w><C-o>', (modes.NORMAL,))
 class VintageousOrigamiMaximizePane(VintageousOrigamiBase):
 
     # Also command :only
@@ -139,7 +139,7 @@ class VintageousOrigamiMaximizePane(VintageousOrigamiBase):
             'action_args': {}
         }
 
-@plugins.register(keys=[('<C-w>x', (modes.NORMAL,))])
+@plugins.register('<C-w>x', (modes.NORMAL,))
 class VintageousOrigamiClose(VintageousOrigamiBase):
     def translate(self, state):
         return {
@@ -148,7 +148,7 @@ class VintageousOrigamiClose(VintageousOrigamiBase):
         }
 
 
-@plugins.register(keys=[('<C-w>X', (modes.NORMAL,))])
+@plugins.register('<C-w>X', (modes.NORMAL,))
 class VintageousOrigamiCloseAll(VintageousOrigamiBase):
     def translate(self, state):
         return {
