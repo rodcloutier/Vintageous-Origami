@@ -94,65 +94,61 @@ class _vio_exchange_files_with_pane(OrigamiPaneCommand):
 
 
 class _vio_ctrl_w_o(sublime_plugin.WindowCommand):
+    """
+    Set current pane to be the only pane
+    """
     def run(self):
         self.window.run_command("set_layout", {"cells": [[0, 0, 1, 1]], "cols": [0.0, 1.0], "rows": [0.0, 1.0]})
+        # TODO: Remove duplicate tabs
 
 
 
 
 # Ex commands
 
-
-from Vintageous.ex.ex_command_parser import ex_cmd_data, EX_COMMANDS
-
-# TODO: Add support for filename, args, etc.
-EX_COMMANDS[('split', 'sp')] = ex_cmd_data(command="vio_ex_split",
-                                           invocations=(),
-                                           error_on=())
-EX_COMMANDS[('vsplit', 'vs')] = ex_cmd_data(command="vio_ex_vsplit",
-                                           invocations=(),
-                                           error_on=())
-EX_COMMANDS[('new', 'new')] = ex_cmd_data(command="vio_ex_new",
-                                           invocations=(),
-                                           error_on=())
-EX_COMMANDS[('vnew', 'vne')] = ex_cmd_data(command="vio_ex_vnew",
-                                           invocations=(),
-                                           error_on=())
-EX_COMMANDS[('only', 'on')] = ex_cmd_data(command="vio_ex_only",
-                                          invocations=(),
-                                          error_on=())
+from Vintageous.vi.core import ViWindowCommandBase
 
 
-# Vintageous version's
-# ('vsplit', 'vs'): ex_cmd_data(
-#                             command='ex_vsplit',
-#                             invocations=(
-#                                 re.compile(r'^$'),
-#                                 re.compile(r'^\s*(?P<file_name>.+)$'),
-#                             ),
-#                             error_on=(ex_error.ERR_NO_RANGE_ALLOWED,
-#                                       ex_error.ERR_NO_BANG_ALLOWED,)
-#                             ),
-
-
-class VioExSplitCommand(sublime_plugin.WindowCommand):
-    def run(self, line_range=None):
-        _vio_ctrl_w_s.run(self)
-
-class VioExVsplitCommand(sublime_plugin.WindowCommand):
-    def run(self, line_range=None):
+class ExVsplit(ViWindowCommandBase):
+    def run(self, command_line=''):
+        # TODO handle the different options
         _vio_ctrl_w_v.run(self)
 
-class VioExNewCommand(sublime_plugin.WindowCommand):
-    def run(self, line_range=None):
+
+class ExSplit(ViWindowCommandBase):
+    def run(self, command_line=''):
+        _vio_ctrl_w_s.run(self)
+
+
+class ExNew(ViWindowCommandBase):
+    def run(self, command_line=''):
         _vio_ctrl_w_n.run(self)
 
-class VioExVnewCommand(sublime_plugin.WindowCommand):
-    def run(self, line_range=None):
+
+class ExVnew(ViWindowCommandBase):
+    def run(self, command_line=''):
         self.window.run_command("create_pane", {"direction": "right"})
         self.window.run_command("travel_to_pane", {"direction": "right"})
         self.window.run_command("new_file")
 
-class VioExOnlyCommand(sublime_plugin.WindowCommand):
-    def run(self, line_range=None):
+class ExOnly(ViWindowCommandBase):
+    def run(self, command_line=''):
         _vio_ctrl_w_o.run(self)
+
+
+
+# Patching
+
+import Vintageous.ex_commands
+Vintageous.ex_commands.ExVsplit = ExVsplit
+Vintageous.ex_commands.ExNew = ExNew
+Vintageous.ex_commands.ExOnly = ExOnly
+
+
+import Vintageous.ex.parser.subscanners
+
+from .ex.scanner_command_split import scan_command_split
+from .ex.scanner_command_vnew import scan_command_vnew
+
+Vintageous.ex.parser.subscanners.patterns[r's(?:plit)?'] = scan_command_split
+Vintageous.ex.parser.subscanners.patterns[r'vne(?:w)?'] = scan_command_vnew
