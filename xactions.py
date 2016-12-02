@@ -76,7 +76,7 @@ class _vio_ctrl_w_n(sublime_plugin.WindowCommand):
 
 
 def opposite_direction(direction):
-        opposites = {"up":"down", "right":"left", "down":"up", "left":"right"}
+        opposites = {"up": "down", "right": "left", "down": "up", "left": "right"}
         return opposites[direction]
 
 
@@ -100,55 +100,3 @@ class _vio_ctrl_w_o(sublime_plugin.WindowCommand):
     def run(self):
         self.window.run_command("set_layout", {"cells": [[0, 0, 1, 1]], "cols": [0.0, 1.0], "rows": [0.0, 1.0]})
         # TODO: Remove duplicate tabs
-
-
-
-
-# Ex commands
-
-from Vintageous.vi.core import ViWindowCommandBase
-
-
-class ExVsplit(ViWindowCommandBase):
-    def run(self, command_line=''):
-        # TODO handle the different options
-        _vio_ctrl_w_v.run(self)
-
-
-class ExSplit(ViWindowCommandBase):
-    def run(self, command_line=''):
-        _vio_ctrl_w_s.run(self)
-
-
-class ExNew(ViWindowCommandBase):
-    def run(self, command_line=''):
-        _vio_ctrl_w_n.run(self)
-
-
-class ExVnew(ViWindowCommandBase):
-    def run(self, command_line=''):
-        self.window.run_command("create_pane", {"direction": "right"})
-        self.window.run_command("travel_to_pane", {"direction": "right"})
-        self.window.run_command("new_file")
-
-class ExOnly(ViWindowCommandBase):
-    def run(self, command_line=''):
-        _vio_ctrl_w_o.run(self)
-
-
-
-# Patching
-
-import Vintageous.ex_commands
-Vintageous.ex_commands.ExVsplit = ExVsplit
-Vintageous.ex_commands.ExNew = ExNew
-Vintageous.ex_commands.ExOnly = ExOnly
-
-
-import Vintageous.ex.parser.subscanners
-
-from .ex.scanner_command_split import scan_command_split
-from .ex.scanner_command_vnew import scan_command_vnew
-
-Vintageous.ex.parser.subscanners.patterns[r's(?:plit)?'] = scan_command_split
-Vintageous.ex.parser.subscanners.patterns[r'vne(?:w)?'] = scan_command_vnew
