@@ -1,0 +1,10 @@
+{
+	// If true, will use Vintageous Origami :vsplit command
+	"vintageous_origami_override_command_vsplit": true,
+
+    // If true, will use Vintageous Origami :new command
+	"vintageous_origami_override_command_new": true,
+
+    // If true, will use Vintageous Origami :only command
+	"vintageous_origami_override_command_only": true,
+}

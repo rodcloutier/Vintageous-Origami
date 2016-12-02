@@ -50,12 +50,23 @@ The following Origami bindings will not work.
 Commands
 -------
 The following basic commands are implemented:
-* `:vs[plit]`: Vertical split
 * `:sp[lit]`: Horizontal split
-* `:new`: Horizontal split with new file
 * `:vne[w]`: Vertical split with new file
+
+By default, the plugin overrides the following command provided by Vintageous
+to provide a behaviour that is more consistent with Vim's
+
+* `:vs[plit]`: Vertical split
+* `:new`: Horizontal split with new file
 * `:on[ly]`: Make current pane the only one
 
+Each of the override can be toggle with the appropriate settingfollowing preferences
+vintageous_origami_override_command_vsplit
+
+
+Settings
+-------
+See [Vintageous-origami/Preferences.sublime-settings](https://github.com/rodcloutier/Vintageous-Origami/blob/master/Preferences.sublime-settings) for a comprehensive list of settings.
 
 
 Install
